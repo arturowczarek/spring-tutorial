@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="user" class="info.owczarek.springtutorial.User">
+		<!-- <property name="name" value="janek" /> -->
+		<constructor-arg value="janek"></constructor-arg>
+		<property name="address">
+			<bean class="info.owczarek.springtutorial.Address">
+				<constructor-arg value="Warszawa" />
+				<constructor-arg value="02-008" />
+				<constructor-arg value="Koszykowa" />
+				<constructor-arg value="86" />
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="user2" class="info.owczarek.springtutorial.User">
+		<constructor-arg>
+			<null/>
+		</constructor-arg>
+	</bean>
+
+</beans>

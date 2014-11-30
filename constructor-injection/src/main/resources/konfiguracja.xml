@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="mojLogger" class="info.owczarek.springtutorial.implementations.LoggerImpl">
+		<property name="name" value="MójLogger"/>
+		<property name="version" value="3"/>
+	</bean>
+	
+	<bean id="repozytoriumUzytkownikow"
+		class="info.owczarek.springtutorial.implementations.UsersRepositoryImpl">
+		<constructor-arg index="2" value="db"></constructor-arg>
+		<constructor-arg index="1" value="http://127.0.0.1:3456"></constructor-arg>
+		<constructor-arg ref="mojLogger"></constructor-arg>
+	</bean>
+
+</beans>

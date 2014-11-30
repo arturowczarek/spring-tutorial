@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="someUser" class="info.owczarek.springtutorial.User" factory-method="getInstance">
+		<constructor-arg value="janek" />
+		<constructor-arg value="43" />
+	</bean>
+
+</beans>
